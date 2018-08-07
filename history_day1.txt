@@ -1,0 +1,192 @@
+    1  cat /etc/redhat-release 
+    2  yum localinstall https://packages.chef.io/files/stable/chefdk/3.1.0/el/7/chefdk-3.1.0-1.el7.x86_64.rpm
+    3  ls
+    4  chef --version
+    5  exit
+    6  ls
+    7  mkdir ~/chef-development
+    8  ls
+    9  cd chef-development/
+   10  ls
+   11  vim hello.rb
+   12  yum install vim -y 
+   13  ls
+   14  vim hello.rb
+   15  ls
+   16  ls -ltr /hello.txt
+   17  chef-client --local-mode hello.rb
+   18  ls -ltr /hello.txt
+   19  cat /hello.txt 
+   20  ls
+   21  vim /hello.txt 
+   22  chef-client --local-mode hello.rb
+   23  vim /hello.txt 
+   24  chef-client --local-mode hello.rb
+   25  vim /hello.txt 
+   26  cat hello.rb 
+   27  cat /hello.txt 
+   28  ls
+   29  vim setup.rb
+   30  chef-client --local-mode setup.rb 
+   31  ls
+   32  rpm -qa | grep tree 
+   33  vim setup.rb 
+   34  chef-client --local-mode setup.rb 
+   35  cd
+   36  cat /etc/motd 
+   37  cat chef-development/setup.rb 
+   38  ls
+   39  cd chef-development/
+   40  ls
+   41  cat hello.rb 
+   42  ls -ltr /hello.txt 
+   43  useradd amitvashist7
+   44  vim hello.rb 
+   45  ls -ltr /hello.txt 
+   46  chef-client --local-mode hello.rb 
+   47  ls -ltr /hello.txt 
+   48  ls
+   49  mkdir cookbooks
+   50  chef --help
+   51  chef generate --help
+   52  chef generate cookbook cookbooks/workstation
+   53  tree cookbooks/
+   54  cd cookbooks/
+   55  ls
+   56  cd workstation/
+   57  ls
+   58  cat README.md 
+   59  ls
+   60  cat CHANGELOG.md 
+   61  ls
+   62  cat metadata.rb 
+   63  ls
+   64  cd recipes/
+   65  ls
+   66  cat default.rb 
+   67  ls
+   68  cd ..
+   69  ls
+   70  cat chefignore 
+   71  ls
+   72  cd ..
+   73  ls
+   74  cd ..
+   75  ls
+   76  mv setup.rb cookbooks/workstation/recipes/
+   77  tree cookbooks/
+   78  yum install git -y 
+   79  ls
+   80  git --version 
+   81  ls
+   82  cd ..
+   83  ls
+   84  cd chef-development/
+   85  ls
+   86  git add . 
+   87  git init 
+   88  ls
+   89  ls -a .git/
+   90  ls
+   91  git add . 
+   92  git status 
+   93  git commit -m "My initial workstation cookbook"
+   94  git config --global user.email "amitvashist7@gmail.com"
+   95   git config --global user.name "Amit Vashist"
+   96  git commit -m "My initial workstation cookbook"
+   97  git status 
+   98  git log 
+   99  vim cookbooks/workstation/recipes/setup.rb 
+  100  git status 
+  101  git add .
+  102* git 
+  103  git commit -m "setup recipe has been modified"
+  104  git status 
+  105  git log 
+  106  cat cookbooks/workstation/recipes/setup.rb 
+  107  ls
+  108  git log 
+  109  git checkout cb20ee115db7336fe743f08efa9c2815d1235f32
+  110  git log 
+  111  cat cookbooks/workstation/recipes/setup.rb 
+  112  ls
+  113  git log 
+  114  git checkout master
+  115  cat cookbooks/workstation/recipes/setup.rb 
+  116  ls
+  117  cat cookbooks/workstation/metadata.rb 
+  118  history 
+  119  ls
+  120  chef generate cookbook cookbooks/apache
+  121  ls
+  122  tree .
+  123  ks
+  124  ls
+  125  vim cookbooks/apache/recipes/server.rb
+  126  chef exec ruby -c cookbooks/apache/recipes/server.rb 
+  127  chef-client --local-mode cookbooks/apache/recipes/server.rb 
+  128  curl localhost
+  129  git status 
+  130  git add . 
+  131  git commit -m "New Apache CookBook Has been introduced."
+  132  ls
+  133  git status 
+  134  ls
+  135  history 
+  136  cat  cookbooks/apache/recipes/server.rb
+  137  ip addr 
+  138  ls
+  139  chef-client --local-mode -r "recipe[apache::server]"
+  140  chef-client --local-mode -r "recipe[workstation::setup]"
+  141  chef-client --local-mode -r "recipe[workstation::setup],recipe[apache::server]"
+  142  vim  cookbooks/apache/recipes/server.rb 
+  143  chef-client --local-mode -r "recipe[workstation::setup],recipe[apache::server]"
+  144  vim  cookbooks/apache/metadata.rb 
+  145  chef-client --local-mode -r "recipe[workstation::setup],recipe[apache::server]"
+  146* 
+  147  ls
+  148  vim cookbooks/workstation/recipes/default.rb 
+  149  ls
+  150  chef-client  -z -r "recipe[workstation]"
+  151  vim /root/.chef/local-mode-cache/cache/cookbooks/workstation/recipes/default.rb
+  152  chef-client  -z -r "recipe[workstation]"
+  153  vi cookbooks/workstation/recipes/default.rb 
+  154  chef-client  -z -r "recipe[workstation]"
+  155  vi cookbooks/workstation/recipes/default.rb 
+  156  chef-client  -z -r "recipe[workstation]"
+  157  ls
+  158  cd cookbooks/
+  159  ls
+  160  cd apache/
+  161  ls
+  162  cd recipes/
+  163  ks
+  164  ls
+  165  cat server.rb 
+  166  vim package.rb
+  167  vim webpage.rb 
+  168  vim service.rb 
+  169  ls
+  170  cd ..
+  171  lc
+  172  cd ..
+  173  ls
+  174  tree apache/
+  175  vim apache/recipes/default.rb 
+  176  chef-client  -z -r "recipe[apache]"
+  177  vim apache/recipes/default.rb 
+  178  chef-client  -z -r "recipe[apache]"
+  179  ls
+  180  cat apache/recipes/default.rb 
+  181  vim apache/metadata.rb 
+  182  vim workstation/recipes/default.rb 
+  183  chef-client  -z -r "recipe[apache]"
+  184  history 
+  185  ls
+  186  cd ..
+  187  ls
+  188  cat .git/
+  189  ls
+  190  git remote add origin https://github.com/amitvashist7/chef-development-CTS.git
+  191  git push -u origin master
+  192  history > history_day1.txt
