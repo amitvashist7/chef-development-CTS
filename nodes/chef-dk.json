@@ -79,12 +79,12 @@
       "by_device": {
         "/dev/mapper/VolGroup00-LogVol00": {
           "kb_size": "39269648",
-          "kb_used": "1747816",
-          "kb_available": "37521832",
+          "kb_used": "1775704",
+          "kb_available": "37493944",
           "percent_used": "5%",
           "total_inodes": "19644416",
-          "inodes_used": "70757",
-          "inodes_available": "19573659",
+          "inodes_used": "72309",
+          "inodes_available": "19572107",
           "inodes_percent_used": "1%",
           "fs_type": "xfs",
           "mount_options": [
@@ -391,12 +391,12 @@
       "by_mountpoint": {
         "/": {
           "kb_size": "39269648",
-          "kb_used": "1747816",
-          "kb_available": "37521832",
+          "kb_used": "1775704",
+          "kb_available": "37493944",
           "percent_used": "5%",
           "total_inodes": "19644416",
-          "inodes_used": "70757",
-          "inodes_available": "19573659",
+          "inodes_used": "72309",
+          "inodes_available": "19572107",
           "inodes_percent_used": "1%",
           "fs_type": "rootfs",
           "mount_options": [
@@ -861,13 +861,13 @@
         "/dev/mapper/VolGroup00-LogVol00,/": {
           "device": "/dev/mapper/VolGroup00-LogVol00",
           "kb_size": "39269648",
-          "kb_used": "1747816",
-          "kb_available": "37521832",
+          "kb_used": "1775704",
+          "kb_available": "37493944",
           "percent_used": "5%",
           "mount": "/",
           "total_inodes": "19644416",
-          "inodes_used": "70757",
-          "inodes_available": "19573659",
+          "inodes_used": "72309",
+          "inodes_available": "19572107",
           "inodes_percent_used": "1%",
           "fs_type": "xfs",
           "mount_options": [
@@ -1558,24 +1558,24 @@
         "surplus": "0"
       },
       "total": "1038988kB",
-      "free": "164348kB",
-      "available": "660972kB",
+      "free": "132204kB",
+      "available": "657840kB",
       "buffers": "1388kB",
-      "cached": "584280kB",
-      "active": "369340kB",
-      "inactive": "327540kB",
+      "cached": "612100kB",
+      "active": "372184kB",
+      "inactive": "352512kB",
       "dirty": "0kB",
       "writeback": "0kB",
-      "anon_pages": "111212kB",
-      "mapped": "28856kB",
-      "slab": "132332kB",
-      "slab_reclaimable": "91880kB",
-      "slab_unreclaim": "40452kB",
-      "page_tables": "4364kB",
+      "anon_pages": "111224kB",
+      "mapped": "28880kB",
+      "slab": "135088kB",
+      "slab_reclaimable": "94260kB",
+      "slab_unreclaim": "40828kB",
+      "page_tables": "4376kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "2092352kB",
-      "committed_as": "371512kB",
+      "committed_as": "371496kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "7560kB",
       "vmalloc_chunk": "34359728252kB",
@@ -1825,16 +1825,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "809475",
-              "packets": "10833",
+              "bytes": "1036584",
+              "packets": "13400",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "150792579",
-              "packets": "115402",
+              "bytes": "156136921",
+              "packets": "123048",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -1851,8 +1851,8 @@
               "collisions": "0"
             },
             "rx": {
-              "bytes": "12378",
-              "packets": "49",
+              "bytes": "14836",
+              "packets": "59",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -1872,10 +1872,10 @@
     "platform": "centos",
     "platform_version": "7.3.1611",
     "platform_family": "rhel",
-    "uptime_seconds": 10457,
-    "uptime": "2 hours 54 minutes 17 seconds",
-    "idletime_seconds": 9522,
-    "idletime": "2 hours 38 minutes 42 seconds",
+    "uptime_seconds": 14474,
+    "uptime": "4 hours 01 minutes 14 seconds",
+    "idletime_seconds": 13319,
+    "idletime": "3 hours 41 minutes 59 seconds",
     "virtualization": {
       "systems": {
         "vbox": "guest"
@@ -2627,7 +2627,7 @@
       "search-state-factory": "/usr/local/share/factory/var",
       "search-configuration": "/root/.config"
     },
-    "ohai_time": 1533631736.1099756,
+    "ohai_time": 1533635752.597923,
     "packages": {
       "ethtool": {
         "epoch": "2",
@@ -3273,11 +3273,25 @@
         "installdate": "1501512684",
         "arch": "x86_64"
       },
+      "perl-TermReadKey": {
+        "epoch": "0",
+        "version": "2.30",
+        "release": "20.el7",
+        "installdate": "1533633305",
+        "arch": "x86_64"
+      },
       "libbasicobjects": {
         "epoch": "0",
         "version": "0.1.1",
         "release": "27.el7",
         "installdate": "1501512684",
+        "arch": "x86_64"
+      },
+      "git": {
+        "epoch": "0",
+        "version": "1.8.3.1",
+        "release": "14.el7_5",
+        "installdate": "1533633322",
         "arch": "x86_64"
       },
       "hostname": {
@@ -4484,11 +4498,25 @@
         "installdate": "1501512683",
         "arch": "x86_64"
       },
+      "perl-Error": {
+        "epoch": "1",
+        "version": "0.17020",
+        "release": "2.el7",
+        "installdate": "1533633304",
+        "arch": "noarch"
+      },
       "libcollection": {
         "epoch": "0",
         "version": "0.6.2",
         "release": "27.el7",
         "installdate": "1501512684",
+        "arch": "x86_64"
+      },
+      "libgnome-keyring": {
+        "epoch": "0",
+        "version": "3.12.0",
+        "release": "1.el7",
+        "installdate": "1533633306",
         "arch": "x86_64"
       },
       "gdbm": {
@@ -4497,6 +4525,13 @@
         "release": "8.el7",
         "installdate": "1501512684",
         "arch": "x86_64"
+      },
+      "perl-Git": {
+        "epoch": "0",
+        "version": "1.8.3.1",
+        "release": "14.el7_5",
+        "installdate": "1533633322",
+        "arch": "noarch"
       },
       "libtevent": {
         "epoch": "0",
@@ -5119,7 +5154,7 @@
       "ULONG_MAX": 18446744073709551615,
       "USHRT_MAX": 65535,
       "WORD_BIT": 32,
-      "_AVPHYS_PAGES": 40153,
+      "_AVPHYS_PAGES": 32030,
       "_NPROCESSORS_CONF": 1,
       "_NPROCESSORS_ONLN": 1,
       "_PHYS_PAGES": 259747,
