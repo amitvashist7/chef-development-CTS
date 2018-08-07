@@ -9,7 +9,7 @@ package 'ntp' do
 end 
 
 file '/etc/motd' do
- content 'Property of Amit Vashist'
+ content 'This file is being manged by Chef with Git'
  owner 'root'
  group 'root'
 end
