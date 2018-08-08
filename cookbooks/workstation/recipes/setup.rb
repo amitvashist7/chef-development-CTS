@@ -8,8 +8,13 @@ package 'ntp' do
  action :install
 end 
 
-file '/etc/motd' do
- content 'This file is being manged by Chef with Git'
+template '/etc/motd' do
+ source 'motd.erb'
+ action :create
+ variables(
+ :firstname => 'Amit',
+ :lastname  => 'Vashist'
+ )
  owner 'root'
  group 'root'
 end
