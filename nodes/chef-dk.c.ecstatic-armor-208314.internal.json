@@ -108,12 +108,12 @@
       "by_device": {
         "/dev/sda1": {
           "kb_size": "10474496",
-          "kb_used": "2386476",
-          "kb_available": "8088020",
+          "kb_used": "2388580",
+          "kb_available": "8085916",
           "percent_used": "23%",
           "total_inodes": "5242368",
-          "inodes_used": "92022",
-          "inodes_available": "5150346",
+          "inodes_used": "92087",
+          "inodes_available": "5150281",
           "inodes_percent_used": "2%",
           "fs_type": "xfs",
           "mount_options": [
@@ -362,12 +362,12 @@
       "by_mountpoint": {
         "/": {
           "kb_size": "10474496",
-          "kb_used": "2386476",
-          "kb_available": "8088020",
+          "kb_used": "2388580",
+          "kb_available": "8085916",
           "percent_used": "23%",
           "total_inodes": "5242368",
-          "inodes_used": "92022",
-          "inodes_available": "5150346",
+          "inodes_used": "92087",
+          "inodes_available": "5150281",
           "inodes_percent_used": "2%",
           "fs_type": "rootfs",
           "mount_options": [
@@ -825,13 +825,13 @@
         "/dev/sda1,/": {
           "device": "/dev/sda1",
           "kb_size": "10474496",
-          "kb_used": "2386476",
-          "kb_available": "8088020",
+          "kb_used": "2388580",
+          "kb_available": "8085916",
           "percent_used": "23%",
           "mount": "/",
           "total_inodes": "5242368",
-          "inodes_used": "92022",
-          "inodes_available": "5150346",
+          "inodes_used": "92087",
+          "inodes_available": "5150281",
           "inodes_percent_used": "2%",
           "fs_type": "xfs",
           "mount_options": [
@@ -1556,24 +1556,24 @@
         "surplus": "0"
       },
       "total": "3623120kB",
-      "free": "2065304kB",
-      "available": "3005944kB",
+      "free": "2051468kB",
+      "available": "3000468kB",
       "buffers": "2068kB",
-      "cached": "1086016kB",
-      "active": "589684kB",
-      "inactive": "670056kB",
+      "cached": "1090432kB",
+      "active": "591844kB",
+      "inactive": "672672kB",
       "dirty": "12kB",
-      "writeback": "0kB",
-      "anon_pages": "171608kB",
-      "mapped": "32628kB",
-      "slab": "198908kB",
-      "slab_reclaimable": "130020kB",
-      "slab_unreclaim": "68888kB",
-      "page_tables": "11072kB",
+      "writeback": "4kB",
+      "anon_pages": "171924kB",
+      "mapped": "32692kB",
+      "slab": "206988kB",
+      "slab_reclaimable": "137912kB",
+      "slab_unreclaim": "69076kB",
+      "page_tables": "11068kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "1811560kB",
-      "committed_as": "401516kB",
+      "committed_as": "401928kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "10628kB",
       "vmalloc_chunk": "34359725048kB",
@@ -1740,16 +1740,16 @@
           "lo": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "1070",
-              "packets": "10",
+              "bytes": "2341",
+              "packets": "20",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "1070",
-              "packets": "10",
+              "bytes": "2341",
+              "packets": "20",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -1758,16 +1758,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "2222331",
-              "packets": "14848",
+              "bytes": "4975474",
+              "packets": "22207",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "167271629",
-              "packets": "19219",
+              "bytes": "177328773",
+              "packets": "28443",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -1787,10 +1787,10 @@
     "platform": "centos",
     "platform_version": "7.5.1804",
     "platform_family": "rhel",
-    "uptime_seconds": 8954,
-    "uptime": "2 hours 29 minutes 14 seconds",
-    "idletime_seconds": 8792,
-    "idletime": "2 hours 26 minutes 32 seconds",
+    "uptime_seconds": 13067,
+    "uptime": "3 hours 37 minutes 47 seconds",
+    "idletime_seconds": 12834,
+    "idletime": "3 hours 33 minutes 54 seconds",
     "virtualization": {
       "systems": {
 
@@ -1932,7 +1932,7 @@
       },
       "project": {
         "attributes": {
-          "ssh-keys": "amitvashist7:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv5ntdqhmaGm8jh7XMiHUNYCm0wFRna3tOjZVnSW5AOVMRVw8gx0Tzc3EASVZN2W6eSOcK5bpz7M0wSilsUayfbnMcHoOwzDHlA6VM6Xk0W13kxgGD6jqaTFNH6fvjClM4QLS6/80euXLMBM0Dr+BJmmhWuDbRF1k+aBSbOySEeUD8oJCAX4y9owy1M67z4nZJZl9ICvDhXcOn4eAW3mR+Oms2NdJsLQe5xHss4h22qPdwXixLy2c2e7yaezDTH/R9HUx8l0KB3bBQRF1xIjGp04gRXk0kAEpYTAnlRKGkzFYw5Hw4vyH1KKyKq6qnhtaZrs03jqHaRFhmzBzGrFBZ google-ssh {\"userName\":\"amitvashist7@gmail.com\",\"expireOn\":\"2018-08-08T06:26:49+0000\"}\namitvashist7:ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJBiBL3YNEJGAN+2s1QUKHLmwUlg8Qtm6UtjsA8ZuY67ANzDQG8EkuxxCxq8DsO/YwELQKvqajxdzemsek0/hb4= google-ssh {\"userName\":\"amitvashist7@gmail.com\",\"expireOn\":\"2018-08-08T06:26:42+0000\"}\namitvashist7:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAY2jfcVnEH/1ZuUQLeIZDP6hnglOLfY03rI3aXRLix3hCKeWLsk+/Q9FIVTQx0Nr2tbT52819sYQE6A8Cat2AjQfgcGb40weT92NScb+nkkcPRCdF71bn40jZIUkqPL/I0aNM7+S2PAQCGEfq01dBxUK3Q+hwK0RUGKTo2ndWWddZRBF9WAyc7Ah/tDAfmmhlllE3WRAiSirGTLi2n2au2QnfXxBQPAftp/MJymcidzHdMCuQO81ekIIS7GhvY8Z2vDIcQ6hqe6cG1SZOLUb420uZZVo8qA28RcLB+0iwJUd/KqwMryllZXN4xR2VxpCKgeMtRQScXn/k4CYVaq2j google-ssh {\"userName\":\"amitvashist7@gmail.com\",\"expireOn\":\"2018-12-31T20:15:17+0000\"}\n"
+          "ssh-keys": "amitvashist7:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZpDRjlUU7jGNZjQiIeIOyOxYEIjz8qtuoCTMG9X931bIneajXNwIgUO2uu+cAmEZ+PhK6erIL5JNNohaVp1oeog0UMzyqegVYgEdynSXMOG8owSlwtx2Y/U2PMt8VA6XXAb6Y4nQQM6U+W0XjuEweXXxF6/0BQM8IbE30TYuRoKhFpJZNXMw4ZwElGJ8tKj37G8KtjdLRiW+6ExAGNAO2wRIGatCayu+dvLNFBg5aHOFYl9txUwP/QtEAT5lDEVKTm2DFQ9E8vL4o5h4kjhj5YfCB/rgMAREtaWxabaiMNXGkshma8BaSueolHDzjm+SBxFhBrmXCWkkBuQgKTZvx google-ssh {\"userName\":\"amitvashist7@gmail.com\",\"expireOn\":\"2018-08-08T07:48:20+0000\"}\namitvashist7:ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBM6HDqaAHU26rRbbmKbUXFM5GynSoDBqhk9DoH5Dnfr7C13D/EYemx+paVr03KiRqayqq7JvYeTRmeFkmRkDic= google-ssh {\"userName\":\"amitvashist7@gmail.com\",\"expireOn\":\"2018-08-08T07:48:12+0000\"}\namitvashist7:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAY2jfcVnEH/1ZuUQLeIZDP6hnglOLfY03rI3aXRLix3hCKeWLsk+/Q9FIVTQx0Nr2tbT52819sYQE6A8Cat2AjQfgcGb40weT92NScb+nkkcPRCdF71bn40jZIUkqPL/I0aNM7+S2PAQCGEfq01dBxUK3Q+hwK0RUGKTo2ndWWddZRBF9WAyc7Ah/tDAfmmhlllE3WRAiSirGTLi2n2au2QnfXxBQPAftp/MJymcidzHdMCuQO81ekIIS7GhvY8Z2vDIcQ6hqe6cG1SZOLUb420uZZVo8qA28RcLB+0iwJUd/KqwMryllZXN4xR2VxpCKgeMtRQScXn/k4CYVaq2j google-ssh {\"userName\":\"amitvashist7@gmail.com\",\"expireOn\":\"2018-12-31T20:15:17+0000\"}\n"
         },
         "numericProjectId": 675316380282,
         "projectId": "ecstatic-armor-208314"
@@ -7709,7 +7709,7 @@
       "search-state-factory": "/usr/local/share/factory/var",
       "search-configuration": "/root/.config"
     },
-    "ohai_time": 1533711073.3396091,
+    "ohai_time": 1533715186.123844,
     "packages": {
       "dbus-python": {
         "epoch": "0",
@@ -10292,7 +10292,7 @@
       "ULONG_MAX": 18446744073709551615,
       "USHRT_MAX": 65535,
       "WORD_BIT": 32,
-      "_AVPHYS_PAGES": 515438,
+      "_AVPHYS_PAGES": 511952,
       "_NPROCESSORS_CONF": 1,
       "_NPROCESSORS_ONLN": 1,
       "_PHYS_PAGES": 905780,
@@ -10569,10 +10569,10 @@
     ],
     "cookbooks": {
       "apache": {
-        "version": "0.1.3"
+        "version": "0.2.1"
       },
       "workstation": {
-        "version": "0.1.0"
+        "version": "0.2.0"
       }
     }
   },
