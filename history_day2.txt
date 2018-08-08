@@ -1,0 +1,467 @@
+    1  wget https://packages.chef.io/files/stable/chefdk/3.1.0/el/7/chefdk-3.1.0-1.el7.x86_64.rpm
+    2  yum install https://packages.chef.io/files/stable/chefdk/3.1.0/el/7/chefdk-3.1.0-1.el7.x86_64.rpm
+    3  chef -version 
+    4  chef --version 
+    5  ls
+    6  mkdir  chef-development
+    7  cd chef-development/
+    8  ls
+    9  git clone https://github.com/amitvashist7/chef-development-CTS.git
+   10  yum install git vim -y
+   11  ls
+   12  git clone https://github.com/amitvashist7/chef-development-CTS.git
+   13  ls
+   14  cd chef-development-CTS/
+   15  ls
+   16  cd ..
+   17  ls
+   18  mv chef-development-CTS ../root
+   19  ls
+   20  cd ..
+   21  l
+   22  ls
+   23  rm -rf chef-development
+   24  mv root chef-development-CTS
+   25  ls
+   26  cd chef-development-CTS/
+   27  ls
+   28  cd nodes/
+   29  ls
+   30  cat chef-dk.json 
+   31  cd ..
+   32  ls
+   33  rm -rf nodes
+   34  ls
+   35  chef-client -z -r "recipe[workstation]"
+   36  cat /etc/motd 
+   37  ls
+   38  chef-client -z -r "recipe[apache]"
+   39  curl localhost
+   40  vim cookbooks/workstation/recipes/setup.rb 
+   41  hostname -I 
+   42  hostname 
+   43  vim cookbooks/workstation/recipes/setup.rb 
+   44  cat /proc/cpuinfo 
+   45  cat /proc/cpuinfo | more
+   46  vim cookbooks/workstation/recipes/setup.rb 
+   47  chef-client -z -r "recipe[workstation]"
+   48  ls
+   49  cat /etc/motd 
+   50  cd
+   51  ohai 
+   52  ohai ipaddress
+   53  ip a
+   54  ohai fqdn
+   55  ohai hostname
+   56  ohai memory
+   57  ohai memory/free
+   58  ohai memory/total
+   59  ohai cpu
+   60  ohai cpu/0/
+   61  ohai cpu/0
+   62  ohai cpu/0/model_name
+   63  ohai cpu/0/mhz
+   64  vim chef-development-CTS/cookbooks/workstation/recipes/setup.rb 
+   65  chef exec ruby -c chef-development-CTS/cookbooks/workstation/recipes/setup.rb 
+   66  chef-client -z -r "recipe[workstation]"
+   67  cd chef-development-CTS/
+   68  ls
+   69  chef-client -z -r "recipe[workstation]"
+   70  cat /etc/motd 
+   71  cat cookbooks/workstation/recipes/setup.rb 
+   72  ls
+   73  vim cookbooks/apache/recipes/webpage.rb 
+   74  vim cookbooks/apache/metadata.rb 
+   75  chef-client -z -r "recipe[apache]"
+   76  vim cookbooks/apache/recipes/webpage.rb 
+   77  ls
+   78  tree cookbooks/
+   79  tree cookbooks/workstation
+   80  chef generate --help
+   81  chef generate template cookbooks/workstation/ motd
+   82  ls
+   83  tree cookbooks/workstation
+   84  vim cookbooks/workstation/templates/motd.erb 
+   85  ls
+   86  vim cookbooks/workstation/recipes/setup.rb 
+   87  vim cookbooks/workstation/templates/motd.erb 
+   88  vim cookbooks/workstation/recipes/setup.rb 
+   89  chef-client -z -r "recipe[workstation]"
+   90  vim cookbooks/workstation/recipes/setup.rb 
+   91  chef exec ruby -c cookbooks/workstation/recipes/setup.rb 
+   92  chef-client -z -r "recipe[workstation]"
+   93  cd cookbooks/
+   94  ls
+   95  tree workstation/
+   96  vim workstation/recipes/setup.rb 
+   97  chef-client -z -r "recipe[workstation]"
+   98  cat /etc/motd 
+   99  history 
+  100  cat 
+  101  ls
+  102  cd chef-development-CTS/
+  103  ls
+  104  cat cookbooks/workstation/templates/motd.erb 
+  105  cat cookbooks/workstation/recipes/setup.rb | egrep -A10 "template"
+  106  vim cookbooks/workstation/recipes/setup.rb
+  107  vim cookbooks/workstation/templates/motd.erb 
+  108  chef-client -z -r "recipe[workstation]"
+  109  vim cookbooks/workstation/recipes/setup.rb 
+  110  chef-client -z -r "recipe[workstation]"
+  111  cat /etc/motd 
+  112  chef generate template cookbooks/workstation/ motd
+  113  cat cookbooks/workstation/templates/motd.erb 
+  114  chef generate template cookbooks/apache/ index
+  115  vim cookbooks/workstation/templates/motd.erb 
+  116  chef-client -z -r "recipe[workstation]"
+  117  cat /etc/motd 
+  118  ls
+  119  vim cookbooks/apache/recipes/webpage.rb 
+  120  vim cookbooks/apache/templates/index.erb 
+  121  vim cookbooks/apache/recipes/webpage.rb 
+  122  chef-client -z -r "recipe[apache]"
+  123  vim cookbooks/apache/templates/index.erb 
+  124  chef-client -z -r "recipe[apache]"
+  125  curl localhost
+  126  vim cookbooks/apache/templates/index.erb 
+  127  cat cookbooks/workstation/recipes/setup.rb | egrep -A10 template
+  128  cat cookbooks/workstation/templates/motd.erb 
+  129  cat cookbooks/workstation/recipes/setup.rb | egrep -A10 template
+  130  cat cookbooks/workstation/templates/motd.erb 
+  131  ls
+  132  vim cookbooks/workstation/metadata.rb 
+  133  vim cookbooks/apache/metadata.rb 
+  134  git status 
+  135  git add .
+  136  git unset nodes/chef-dk.json
+  137  git reset nodes/chef-dk.json
+  138  ls
+  139  git add .
+  140  git add . --ignore-removal
+  141  git status 
+  142  git commit -m "ERB Template & Varibles Intro."
+  143  git config --global user.name "Amit Vashist"
+  144  git config --global user.email amitvashist7@gmail.com
+  145  git push 
+  146  ls
+  147  cd cookbooks/
+  148  ls
+  149  cd apache/
+  150  ls
+  151  chef generate --help
+  152  cd ../../
+  153  ls
+  154  chef generate file cookbooks/apache/
+  155  ls
+  156  tree cookbooks/apache/
+  157  ls
+  158  cd cookbooks/
+  159  ls
+  160  cd apache/
+  161  ls
+  162  echo "Hello Cookbookk File" abc.html
+  163  ls
+  164  cd .././
+  165  ls
+  166  cd ..
+  167  ls
+  168  chef generate file cookbooks/apache/ abc.html
+  169  tree cookbooks/apache/
+  170  ls
+  171  vim cookbooks/apache/files/default/abc.html 
+  172  vim cookbooks/apache/recipes/webpage.rb 
+  173  chef exec ruby -c cookbooks/apache/
+  174  chef exec ruby -c cookbooks/apache/recipes/webpage.rb 
+  175  chef-client -z -r "recipe[apache]"
+  176  vim cookbooks/apache/recipes/webpage.rb 
+  177  chef exec ruby -c cookbooks/apache/recipes/webpage.rb 
+  178  chef-client -z -r "recipe[apache]"
+  179  ls -ltr /var/www/html/
+  180  vim cookbooks/apache/templates/
+  181  vim cookbooks/apache/recipes/webpage.rb
+  182  vim cookbooks/apache/templates/index.erb 
+  183  chef-client -z -r "recipe[apache]"
+  184  vim cookbooks/apache/templates/index.erb 
+  185  chef-client -z -r "recipe[apache]"
+  186  vim cookbooks/apache/templates/index.erb 
+  187  chef-client -z -r "recipe[apache]"
+  188  vim cookbooks/apache/templates/index.erb 
+  189  chef-client -z -r "recipe[apache]"
+  190  vim cookbooks/apache/templates/index.erb 
+  191  vim cookbooks/apache/recipes/webpage.rb 
+  192  vim cookbooks/apache/metadata.rb 
+  193  git add . 
+  194  cd chef-development-CTS/
+  195  ls
+  196  vim cookbooks/apache/recipes/webpage.rb 
+  197  chef-client -z -r "recipe[apache]"
+  198  file /var/www/html/mario.png 
+  199  git log 
+  200  vim cookbooks/apache/recipes/webpage.rb 
+  201  chef-client -z -r "recipe[apache]"
+  202  cat /var/www/html/mario.png 
+  203  vim cookbooks/apache/recipes/webpage.rb 
+  204  chef-client -z -r "recipe[apache]"
+  205  rm -rf /var/www/html/mario.png 
+  206  vim cookbooks/apache/recipes/webpage.rb 
+  207  vim cookbooks/apache/templates/index.erb 
+  208  chef-client -z -r "recipe[apache]"
+  209  git add . 
+  210  git add --ignore-removal
+  211  git add . --ignore-removal
+  212  git commit -m "Copy Static Local file & remote file"
+  213  git push 
+  214  ls
+  215  vim cookbooks/workstation/recipes/setup.rb 
+  216  grep -i amitvashist7 /etc/group
+  217  chef exec ruby -c cookbooks/workstation/recipes/setup.rb 
+  218  chef-client -z -r "recipe[workstation]"
+  219  grep -i chef-test /etc/group
+  220  grep -i user1 /etc/passwd
+  221  chef exec ruby -c cookbooks/workstation/recipes/setup.rb 
+  222  vim cookbooks/workstation/recipes/setup.rb 
+  223  chef exec ruby -c cookbooks/workstation/recipes/setup.rb 
+  224  grep -i amitvashist7 /etc/group
+  225  chef-client -z -r "recipe[workstation]"
+  226  grep -i amitvashist7 /etc/group
+  227  vim cookbooks/workstation/recipes/setup.rb 
+  228  vim cookbooks/apache/recipes/webpage.rb 
+  229  vim cookbooks/apache/templates/index.erb 
+  230  chef-client -z -r "recipe[apache]"
+  231  vim cookbooks/apache/templates/index.erb 
+  232  chef-client -z -r "recipe[apache]"
+  233  vim cookbooks/apache/recipes/webpage.rb 
+  234  vim cookbooks/apache/templates/index.erb 
+  235  chef-client -z -r "recipe[apache]"
+  236  vim cookbooks/apache/recipes/webpage.rb 
+  237  vim cookbooks/apache/recipes/service.rb 
+  238  chef-client -z -r "recipe[apache]"
+  239  vim cookbooks/apache/recipes/webpage.rb 
+  240  chef-client -z -r "recipe[apache]"
+  241  vim cookbooks/apache/templates/index.erb 
+  242  chef-client -z -r "recipe[apache]"
+  243  vim cookbooks/apache/recipes/webpage.rb 
+  244  vim cookbooks/apache/recipes/service.rb 
+  245  ls
+  246  chef generate cookbook myapache
+  247  ls
+  248  cd myapache/
+  249  ls
+  250  cd ..
+  251  ls
+  252  mv myapache cookbooks/
+  253  ls
+  254  cd cookbooks/
+  255  ls
+  256  cp -rf apache/recipes/package.rb myapache/recipes/
+  257  cp -rf apache/recipes/service.rb myapache/recipes/
+  258  cp -rf apache/recipes/webpage.rb myapache/recipes/
+  259  ls
+  260  cp -rf apache/templates myapache/
+  261  cp -rf apache/files/ myapache/
+  262  ls
+  263  cd myapache/
+  264  ls
+  265  cd templates/
+  266  ls
+  267  vim index.erb 
+  268  ls
+  269  cd ..
+  270  ls
+  271  cp -rf /etc/httpd/conf/httpd.conf templates/httpd.erb
+  272  ls
+  273  cd recipes/
+  274  ls
+  275  cp -rf webpage.rb config.rb
+  276  vim config.rb 
+  277  ls
+  278  vim webpage.rb 
+  279  ls
+  280  cd ..
+  281  ls
+  282  vim templates/index.erb 
+  283  ls
+  284  vim recipes/webpage.rb 
+  285  cat templates/index.erb 
+  286  vim recipes/webpage.rb 
+  287  vim recipes/config.rb 
+  288  vim recipes/service.rb 
+  289  cat ../apache/recipes/default.rb 
+  290  vi recipes/default.rb 
+  291  cat recipes/config.rb 
+  292  vim templates/httpd.erb 
+  293  ls
+  294  chef exec ruby -c recipes/default.rb 
+  295  chef exec ruby -c recipes/package.rb 
+  296  chef exec ruby -c recipes/config.rb 
+  297  chef exec ruby -c recipes/service.rb 
+  298  chef exec ruby -c recipes/webpage.rb 
+  299  ls
+  300  cd ..
+  301  ls
+  302  chef-client -z -r "recipe[myapache]"
+  303  vim myapache/templates/httpd.erb 
+  304  chef-client -z -r "recipe[myapache]"
+  305  vim myapache/templates/httpd.erb 
+  306  vim myapache/recipes/webpage.rb 
+  307  chef-client -z -r "recipe[myapache]"
+  308  vim myapache/recipes/webpage.rb 
+  309  ls
+  310  vim myapache/
+  311  vim myapache/recipes/default.rb 
+  312  vim myapache/recipes/config.rb 
+  313  vim myapache/recipes/webpage.rb 
+  314  vim myapache/recipes/service.rb 
+  315  chef exec ruby -c recipes/webpage.rb 
+  316  chef exec ruby -c myapache/recipes/webpage.rb 
+  317  vi myapache/recipes/webpage.rb 
+  318  vim myapache/recipes/webpage.rb 
+  319  chef exec ruby -c myapache/recipes/webpage.rb 
+  320  vim myapache/recipes/webpage.rb 
+  321  chef exec ruby -c myapache/recipes/webpage.rb 
+  322  vim myapache/recipes/webpage.rb 
+  323  chef exec ruby -c myapache/recipes/webpage.rb 
+  324  chef exec ruby -c myapache/recipes/config.rb 
+  325  chef exec ruby -c myapache/recipes/service.rb 
+  326  chef-client -z -r "recipe[myapache]"
+  327  chef exec ruby -c myapache/recipes/ser
+  328  vim myapache/recipes/config.rb 
+  329  chef-client -z -r "recipe[myapache]"
+  330  cd cd 
+  331  ls -ltr /var/www/html/
+  332  ls
+  333  ls -ltr /var/www/html/amit/
+  334  ls
+  335  cd myapache/
+  336  ls
+  337  vim recipes/webpage.rb 
+  338  chef-client -z -r "recipe[myapache]"
+  339  vim recipes/webpage.rb 
+  340  chef-client -z -r "recipe[myapache]"
+  341  vim recipes/webpage.rb 
+  342  chef-client -z -r "recipe[myapache]"
+  343  vim recipes/webpage.rb 
+  344  chef-client -z -r "recipe[myapache]"
+  345  vim recipes/default.rb 
+  346  chef-client -z -r "recipe[myapache]"
+  347  vim recipes/webpage.rb 
+  348  vim templates/index.erb 
+  349  vim recipes/webpage.rb 
+  350  chef-client -z -r "recipe[myapache]"
+  351  cd ..
+  352  git add .
+  353  git commit -m "Myapache"
+  354  git push 
+  355  ls
+  356  cd myapache/
+  357  ls
+  358  tree . 
+  359  vim templates/httpd.erb 
+  360  vim  /etc/httpd/conf/httpd.conf 
+  361  ls
+  362  cd /var/www/html/
+  363  ls
+  364  cd ..
+  365  ls
+  366  cd 
+  367  ls
+  368  cd chef-development-CTS/
+  369  ls
+  370  vim cookbooks/myapache/recipes/default.rb 
+  371  chef-client -z -r "recipe[myapache]"
+  372  ls -ltr /var/www/html/
+  373  ls -ltr /var/www/html/vashist/
+  374  grep -i vashist /etc/httpd/conf/httpd.conf 
+  375  vim cookbooks/myapache/recipes/default.rb 
+  376  vim cookbooks/myapache/recipes/config.rb 
+  377  vim cookbooks/myapache/recipes/webpage.rb 
+  378  vim cookbooks/myapache/recipes/
+  379  vim cookbooks/myapache/recipes/default.rb 
+  380  chef-client -z -r "recipe[myapache]"
+  381  ls -ltr /var/www/html/
+  382  git add . 
+  383  git add . --ignore-removal
+  384  git commit -m "Default Varibales in default recipe"
+  385  git push 
+  386  cd
+  387  wget https://35.200.170.141/organizations/cheftraining/getting_started
+  388  yum install wget -y 
+  389  wget  https://35.200.170.141/organizations/cheftraining/getting_started
+  390  wget  https://35.200.170.141/organizations/cheftraining/getting_started --no-check-certificate
+  391  ls
+  392  passwd 
+  393  vim /etc/ssh/sshd_config 
+  394  service sshd restart
+  395  passwd amitvashist7
+  396  exit
+  397  passwd 
+  398  ls
+  399  yum install unzip -y 
+  400  unzip chef-starter\ \(1\).zip 
+  401  ls
+  402  cd chef-repo/
+  403  ls
+  404  ls -ltr .chef/
+  405  knife node list 
+  406  ls
+  407  cd .chef/
+  408  ls
+  409  vim knife.rb 
+  410  ping chef-server.c.ecstatic-armor-208314.internal
+  411  knife ssl check
+  412  mkdir -p /root/chef-repo/.chef/trusted_certs
+  413  vim /root/chef-repo/.chef/trusted_certs/chef-server.c.ecstatic-armor-208314.internal.crt
+  414  ls
+  415  cd ..
+  416  knife ssl check
+  417  knife client  list 
+  418  knife node  list 
+  419  pwd
+  420  ls
+  421  ls -a 
+  422  cat .chef/knife.rb 
+  423  ls
+  424  ls -ltr cookbooks/
+  425  ls
+  426  cp -rf ../chef-development-CTS/cookbooks 
+  427  cp -rf ../chef-development-CTS/cookbooks  .
+  428  ls
+  429  cd cookbooks/
+  430  ls
+  431  rm -rf starter 
+  432  ls -ltr 
+  433  ls
+  434  cd ..
+  435  knife --help
+  436  knife cookbook --help
+  437  knife cookbook upload workstation
+  438  knife cookbook list 
+  439  vim cookbooks/myapache/
+  440  vim cookbooks/myapache/metadata.rb 
+  441  knife cookbook upload apache myapache
+  442  knife cookbook list 
+  443  ip addr 
+  444  knife bootstrap 10.160.0.2 --ssh-user root --name-name gcp-centos-chef-dk
+  445  knife bootstrap 10.160.0.2 --ssh-user root --node-name gcp-centos-chef-dk
+  446  knife node list 
+  447  knife node show gcp-centos-chef-dk
+  448  ls
+  449  service httpd stop
+  450  rm -rf /var/www/html/*
+  451  ls
+  452  yum remove httpd -y 
+  453  > /etc/motd 
+  454  ls
+  455  knife node show gcp-centos-chef-dk
+  456  knife node run_list add gcp-centos-chef-dk "recipe[workstation],recipe[myapache]"
+  457  knife node show gcp-centos-chef-dk
+  458  chef-client 
+  459  ls -ltr /var/www/html/
+  460  ls
+  461  history 
+  462  knife node show gcp-centos-chef-dk
+  463  cd 
+  464  ls
+  465  cd chef-development-CTS/
+  466  ls
+  467  history > history_day2.txt
