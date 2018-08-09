@@ -1,0 +1,1000 @@
+   25  ls
+   26  cd chef-development-CTS/
+   27  ls
+   28  cd nodes/
+   29  ls
+   30  cat chef-dk.json 
+   31  cd ..
+   32  ls
+   33  rm -rf nodes
+   34  ls
+   35  chef-client -z -r "recipe[workstation]"
+   36  cat /etc/motd 
+   37  ls
+   38  chef-client -z -r "recipe[apache]"
+   39  curl localhost
+   40  vim cookbooks/workstation/recipes/setup.rb 
+   41  hostname -I 
+   42  hostname 
+   43  vim cookbooks/workstation/recipes/setup.rb 
+   44  cat /proc/cpuinfo 
+   45  cat /proc/cpuinfo | more
+   46  vim cookbooks/workstation/recipes/setup.rb 
+   47  chef-client -z -r "recipe[workstation]"
+   48  ls
+   49  cat /etc/motd 
+   50  cd
+   51  ohai 
+   52  ohai ipaddress
+   53  ip a
+   54  ohai fqdn
+   55  ohai hostname
+   56  ohai memory
+   57  ohai memory/free
+   58  ohai memory/total
+   59  ohai cpu
+   60  ohai cpu/0/
+   61  ohai cpu/0
+   62  ohai cpu/0/model_name
+   63  ohai cpu/0/mhz
+   64  vim chef-development-CTS/cookbooks/workstation/recipes/setup.rb 
+   65  chef exec ruby -c chef-development-CTS/cookbooks/workstation/recipes/setup.rb 
+   66  chef-client -z -r "recipe[workstation]"
+   67  cd chef-development-CTS/
+   68  ls
+   69  chef-client -z -r "recipe[workstation]"
+   70  cat /etc/motd 
+   71  cat cookbooks/workstation/recipes/setup.rb 
+   72  ls
+   73  vim cookbooks/apache/recipes/webpage.rb 
+   74  vim cookbooks/apache/metadata.rb 
+   75  chef-client -z -r "recipe[apache]"
+   76  vim cookbooks/apache/recipes/webpage.rb 
+   77  ls
+   78  tree cookbooks/
+   79  tree cookbooks/workstation
+   80  chef generate --help
+   81  chef generate template cookbooks/workstation/ motd
+   82  ls
+   83  tree cookbooks/workstation
+   84  vim cookbooks/workstation/templates/motd.erb 
+   85  ls
+   86  vim cookbooks/workstation/recipes/setup.rb 
+   87  vim cookbooks/workstation/templates/motd.erb 
+   88  vim cookbooks/workstation/recipes/setup.rb 
+   89  chef-client -z -r "recipe[workstation]"
+   90  vim cookbooks/workstation/recipes/setup.rb 
+   91  chef exec ruby -c cookbooks/workstation/recipes/setup.rb 
+   92  chef-client -z -r "recipe[workstation]"
+   93  cd cookbooks/
+   94  ls
+   95  tree workstation/
+   96  vim workstation/recipes/setup.rb 
+   97  chef-client -z -r "recipe[workstation]"
+   98  cat /etc/motd 
+   99  history 
+  100  cat 
+  101  ls
+  102  cd chef-development-CTS/
+  103  ls
+  104  cat cookbooks/workstation/templates/motd.erb 
+  105  cat cookbooks/workstation/recipes/setup.rb | egrep -A10 "template"
+  106  vim cookbooks/workstation/recipes/setup.rb
+  107  vim cookbooks/workstation/templates/motd.erb 
+  108  chef-client -z -r "recipe[workstation]"
+  109  vim cookbooks/workstation/recipes/setup.rb 
+  110  chef-client -z -r "recipe[workstation]"
+  111  cat /etc/motd 
+  112  chef generate template cookbooks/workstation/ motd
+  113  cat cookbooks/workstation/templates/motd.erb 
+  114  chef generate template cookbooks/apache/ index
+  115  vim cookbooks/workstation/templates/motd.erb 
+  116  chef-client -z -r "recipe[workstation]"
+  117  cat /etc/motd 
+  118  ls
+  119  vim cookbooks/apache/recipes/webpage.rb 
+  120  vim cookbooks/apache/templates/index.erb 
+  121  vim cookbooks/apache/recipes/webpage.rb 
+  122  chef-client -z -r "recipe[apache]"
+  123  vim cookbooks/apache/templates/index.erb 
+  124  chef-client -z -r "recipe[apache]"
+  125  curl localhost
+  126  vim cookbooks/apache/templates/index.erb 
+  127  cat cookbooks/workstation/recipes/setup.rb | egrep -A10 template
+  128  cat cookbooks/workstation/templates/motd.erb 
+  129  cat cookbooks/workstation/recipes/setup.rb | egrep -A10 template
+  130  cat cookbooks/workstation/templates/motd.erb 
+  131  ls
+  132  vim cookbooks/workstation/metadata.rb 
+  133  vim cookbooks/apache/metadata.rb 
+  134  git status 
+  135  git add .
+  136  git unset nodes/chef-dk.json
+  137  git reset nodes/chef-dk.json
+  138  ls
+  139  git add .
+  140  git add . --ignore-removal
+  141  git status 
+  142  git commit -m "ERB Template & Varibles Intro."
+  143  git config --global user.name "Amit Vashist"
+  144  git config --global user.email amitvashist7@gmail.com
+  145  git push 
+  146  ls
+  147  cd cookbooks/
+  148  ls
+  149  cd apache/
+  150  ls
+  151  chef generate --help
+  152  cd ../../
+  153  ls
+  154  chef generate file cookbooks/apache/
+  155  ls
+  156  tree cookbooks/apache/
+  157  ls
+  158  cd cookbooks/
+  159  ls
+  160  cd apache/
+  161  ls
+  162  echo "Hello Cookbookk File" abc.html
+  163  ls
+  164  cd .././
+  165  ls
+  166  cd ..
+  167  ls
+  168  chef generate file cookbooks/apache/ abc.html
+  169  tree cookbooks/apache/
+  170  ls
+  171  vim cookbooks/apache/files/default/abc.html 
+  172  vim cookbooks/apache/recipes/webpage.rb 
+  173  chef exec ruby -c cookbooks/apache/
+  174  chef exec ruby -c cookbooks/apache/recipes/webpage.rb 
+  175  chef-client -z -r "recipe[apache]"
+  176  vim cookbooks/apache/recipes/webpage.rb 
+  177  chef exec ruby -c cookbooks/apache/recipes/webpage.rb 
+  178  chef-client -z -r "recipe[apache]"
+  179  ls -ltr /var/www/html/
+  180  vim cookbooks/apache/templates/
+  181  vim cookbooks/apache/recipes/webpage.rb
+  182  vim cookbooks/apache/templates/index.erb 
+  183  chef-client -z -r "recipe[apache]"
+  184  vim cookbooks/apache/templates/index.erb 
+  185  chef-client -z -r "recipe[apache]"
+  186  vim cookbooks/apache/templates/index.erb 
+  187  chef-client -z -r "recipe[apache]"
+  188  vim cookbooks/apache/templates/index.erb 
+  189  chef-client -z -r "recipe[apache]"
+  190  vim cookbooks/apache/templates/index.erb 
+  191  vim cookbooks/apache/recipes/webpage.rb 
+  192  vim cookbooks/apache/metadata.rb 
+  193  git add . 
+  194  cd chef-development-CTS/
+  195  ls
+  196  vim cookbooks/apache/recipes/webpage.rb 
+  197  chef-client -z -r "recipe[apache]"
+  198  file /var/www/html/mario.png 
+  199  git log 
+  200  vim cookbooks/apache/recipes/webpage.rb 
+  201  chef-client -z -r "recipe[apache]"
+  202  cat /var/www/html/mario.png 
+  203  vim cookbooks/apache/recipes/webpage.rb 
+  204  chef-client -z -r "recipe[apache]"
+  205  rm -rf /var/www/html/mario.png 
+  206  vim cookbooks/apache/recipes/webpage.rb 
+  207  vim cookbooks/apache/templates/index.erb 
+  208  chef-client -z -r "recipe[apache]"
+  209  git add . 
+  210  git add --ignore-removal
+  211  git add . --ignore-removal
+  212  git commit -m "Copy Static Local file & remote file"
+  213  git push 
+  214  ls
+  215  vim cookbooks/workstation/recipes/setup.rb 
+  216  grep -i amitvashist7 /etc/group
+  217  chef exec ruby -c cookbooks/workstation/recipes/setup.rb 
+  218  chef-client -z -r "recipe[workstation]"
+  219  grep -i chef-test /etc/group
+  220  grep -i user1 /etc/passwd
+  221  chef exec ruby -c cookbooks/workstation/recipes/setup.rb 
+  222  vim cookbooks/workstation/recipes/setup.rb 
+  223  chef exec ruby -c cookbooks/workstation/recipes/setup.rb 
+  224  grep -i amitvashist7 /etc/group
+  225  chef-client -z -r "recipe[workstation]"
+  226  grep -i amitvashist7 /etc/group
+  227  vim cookbooks/workstation/recipes/setup.rb 
+  228  vim cookbooks/apache/recipes/webpage.rb 
+  229  vim cookbooks/apache/templates/index.erb 
+  230  chef-client -z -r "recipe[apache]"
+  231  vim cookbooks/apache/templates/index.erb 
+  232  chef-client -z -r "recipe[apache]"
+  233  vim cookbooks/apache/recipes/webpage.rb 
+  234  vim cookbooks/apache/templates/index.erb 
+  235  chef-client -z -r "recipe[apache]"
+  236  vim cookbooks/apache/recipes/webpage.rb 
+  237  vim cookbooks/apache/recipes/service.rb 
+  238  chef-client -z -r "recipe[apache]"
+  239  vim cookbooks/apache/recipes/webpage.rb 
+  240  chef-client -z -r "recipe[apache]"
+  241  vim cookbooks/apache/templates/index.erb 
+  242  chef-client -z -r "recipe[apache]"
+  243  vim cookbooks/apache/recipes/webpage.rb 
+  244  vim cookbooks/apache/recipes/service.rb 
+  245  ls
+  246  chef generate cookbook myapache
+  247  ls
+  248  cd myapache/
+  249  ls
+  250  cd ..
+  251  ls
+  252  mv myapache cookbooks/
+  253  ls
+  254  cd cookbooks/
+  255  ls
+  256  cp -rf apache/recipes/package.rb myapache/recipes/
+  257  cp -rf apache/recipes/service.rb myapache/recipes/
+  258  cp -rf apache/recipes/webpage.rb myapache/recipes/
+  259  ls
+  260  cp -rf apache/templates myapache/
+  261  cp -rf apache/files/ myapache/
+  262  ls
+  263  cd myapache/
+  264  ls
+  265  cd templates/
+  266  ls
+  267  vim index.erb 
+  268  ls
+  269  cd ..
+  270  ls
+  271  cp -rf /etc/httpd/conf/httpd.conf templates/httpd.erb
+  272  ls
+  273  cd recipes/
+  274  ls
+  275  cp -rf webpage.rb config.rb
+  276  vim config.rb 
+  277  ls
+  278  vim webpage.rb 
+  279  ls
+  280  cd ..
+  281  ls
+  282  vim templates/index.erb 
+  283  ls
+  284  vim recipes/webpage.rb 
+  285  cat templates/index.erb 
+  286  vim recipes/webpage.rb 
+  287  vim recipes/config.rb 
+  288  vim recipes/service.rb 
+  289  cat ../apache/recipes/default.rb 
+  290  vi recipes/default.rb 
+  291  cat recipes/config.rb 
+  292  vim templates/httpd.erb 
+  293  ls
+  294  chef exec ruby -c recipes/default.rb 
+  295  chef exec ruby -c recipes/package.rb 
+  296  chef exec ruby -c recipes/config.rb 
+  297  chef exec ruby -c recipes/service.rb 
+  298  chef exec ruby -c recipes/webpage.rb 
+  299  ls
+  300  cd ..
+  301  ls
+  302  chef-client -z -r "recipe[myapache]"
+  303  vim myapache/templates/httpd.erb 
+  304  chef-client -z -r "recipe[myapache]"
+  305  vim myapache/templates/httpd.erb 
+  306  vim myapache/recipes/webpage.rb 
+  307  chef-client -z -r "recipe[myapache]"
+  308  vim myapache/recipes/webpage.rb 
+  309  ls
+  310  vim myapache/
+  311  vim myapache/recipes/default.rb 
+  312  vim myapache/recipes/config.rb 
+  313  vim myapache/recipes/webpage.rb 
+  314  vim myapache/recipes/service.rb 
+  315  chef exec ruby -c recipes/webpage.rb 
+  316  chef exec ruby -c myapache/recipes/webpage.rb 
+  317  vi myapache/recipes/webpage.rb 
+  318  vim myapache/recipes/webpage.rb 
+  319  chef exec ruby -c myapache/recipes/webpage.rb 
+  320  vim myapache/recipes/webpage.rb 
+  321  chef exec ruby -c myapache/recipes/webpage.rb 
+  322  vim myapache/recipes/webpage.rb 
+  323  chef exec ruby -c myapache/recipes/webpage.rb 
+  324  chef exec ruby -c myapache/recipes/config.rb 
+  325  chef exec ruby -c myapache/recipes/service.rb 
+  326  chef-client -z -r "recipe[myapache]"
+  327  chef exec ruby -c myapache/recipes/ser
+  328  vim myapache/recipes/config.rb 
+  329  chef-client -z -r "recipe[myapache]"
+  330  cd cd 
+  331  ls -ltr /var/www/html/
+  332  ls
+  333  ls -ltr /var/www/html/amit/
+  334  ls
+  335  cd myapache/
+  336  ls
+  337  vim recipes/webpage.rb 
+  338  chef-client -z -r "recipe[myapache]"
+  339  vim recipes/webpage.rb 
+  340  chef-client -z -r "recipe[myapache]"
+  341  vim recipes/webpage.rb 
+  342  chef-client -z -r "recipe[myapache]"
+  343  vim recipes/webpage.rb 
+  344  chef-client -z -r "recipe[myapache]"
+  345  vim recipes/default.rb 
+  346  chef-client -z -r "recipe[myapache]"
+  347  vim recipes/webpage.rb 
+  348  vim templates/index.erb 
+  349  vim recipes/webpage.rb 
+  350  chef-client -z -r "recipe[myapache]"
+  351  cd ..
+  352  git add .
+  353  git commit -m "Myapache"
+  354  git push 
+  355  ls
+  356  cd myapache/
+  357  ls
+  358  tree . 
+  359  vim templates/httpd.erb 
+  360  vim  /etc/httpd/conf/httpd.conf 
+  361  ls
+  362  cd /var/www/html/
+  363  ls
+  364  cd ..
+  365  ls
+  366  cd 
+  367  ls
+  368  cd chef-development-CTS/
+  369  ls
+  370  vim cookbooks/myapache/recipes/default.rb 
+  371  chef-client -z -r "recipe[myapache]"
+  372  ls -ltr /var/www/html/
+  373  ls -ltr /var/www/html/vashist/
+  374  grep -i vashist /etc/httpd/conf/httpd.conf 
+  375  vim cookbooks/myapache/recipes/default.rb 
+  376  vim cookbooks/myapache/recipes/config.rb 
+  377  vim cookbooks/myapache/recipes/webpage.rb 
+  378  vim cookbooks/myapache/recipes/
+  379  vim cookbooks/myapache/recipes/default.rb 
+  380  chef-client -z -r "recipe[myapache]"
+  381  ls -ltr /var/www/html/
+  382  git add . 
+  383  git add . --ignore-removal
+  384  git commit -m "Default Varibales in default recipe"
+  385  git push 
+  386  cd
+  387  wget https://35.200.170.141/organizations/cheftraining/getting_started
+  388  yum install wget -y 
+  389  wget  https://35.200.170.141/organizations/cheftraining/getting_started
+  390  wget  https://35.200.170.141/organizations/cheftraining/getting_started --no-check-certificate
+  391  ls
+  392  passwd 
+  393  vim /etc/ssh/sshd_config 
+  394  service sshd restart
+  395  passwd amitvashist7
+  396  exit
+  397  passwd 
+  398  ls
+  399  yum install unzip -y 
+  400  unzip chef-starter\ \(1\).zip 
+  401  ls
+  402  cd chef-repo/
+  403  ls
+  404  ls -ltr .chef/
+  405  knife node list 
+  406  ls
+  407  cd .chef/
+  408  ls
+  409  vim knife.rb 
+  410  ping chef-server.c.ecstatic-armor-208314.internal
+  411  knife ssl check
+  412  mkdir -p /root/chef-repo/.chef/trusted_certs
+  413  vim /root/chef-repo/.chef/trusted_certs/chef-server.c.ecstatic-armor-208314.internal.crt
+  414  ls
+  415  cd ..
+  416  knife ssl check
+  417  knife client  list 
+  418  knife node  list 
+  419  pwd
+  420  ls
+  421  ls -a 
+  422  cat .chef/knife.rb 
+  423  ls
+  424  ls -ltr cookbooks/
+  425  ls
+  426  cp -rf ../chef-development-CTS/cookbooks 
+  427  cp -rf ../chef-development-CTS/cookbooks  .
+  428  ls
+  429  cd cookbooks/
+  430  ls
+  431  rm -rf starter 
+  432  ls -ltr 
+  433  ls
+  434  cd ..
+  435  knife --help
+  436  knife cookbook --help
+  437  knife cookbook upload workstation
+  438  knife cookbook list 
+  439  vim cookbooks/myapache/
+  440  vim cookbooks/myapache/metadata.rb 
+  441  knife cookbook upload apache myapache
+  442  knife cookbook list 
+  443  ip addr 
+  444  knife bootstrap 10.160.0.2 --ssh-user root --name-name gcp-centos-chef-dk
+  445  knife bootstrap 10.160.0.2 --ssh-user root --node-name gcp-centos-chef-dk
+  446  knife node list 
+  447  knife node show gcp-centos-chef-dk
+  448  ls
+  449  service httpd stop
+  450  rm -rf /var/www/html/*
+  451  ls
+  452  yum remove httpd -y 
+  453  > /etc/motd 
+  454  ls
+  455  knife node show gcp-centos-chef-dk
+  456  knife node run_list add gcp-centos-chef-dk "recipe[workstation],recipe[myapache]"
+  457  knife node show gcp-centos-chef-dk
+  458  chef-client 
+  459  ls -ltr /var/www/html/
+  460  ls
+  461  history 
+  462  knife node show gcp-centos-chef-dk
+  463  cd 
+  464  ls
+  465  cd chef-development-CTS/
+  466  ls
+  467  history > history_day2.txt
+  468  git add .
+  469  git add . --ignore-removal
+  470  git commit -m "Day-2 History"
+  471  git push 
+  472  init 0 
+  473  ls
+  474  cd chef-repo/
+  475  ls
+  476  cd cookbooks/
+  477  ls
+  478  cd ..
+  479  ls
+  480  knife node list 
+  481  knife node show gcp-centos-chef-dk
+  482  ls
+  483  cd cookbooks/
+  484  ls
+  485  cat myapache/recipes/default.rb 
+  486  ssh 10.160.0.3
+  487  ssh 10.160.0.4
+  488  ssh 10.160.0.3
+  489  passwd 
+  490  ls
+  491  cd ..
+  492  l
+  493  ls
+  494  knife node list 
+  495  knife bootstrap 10.160.0.3 --ssh-user root --node-name gcp-centos-chef-server
+  496  knife bootstrap 10.160.0.4 --ssh-user root --node-name gcp-centos-chef-clinet-1
+  497  knife node list 
+  498  knife node show gcp-centos-chef-clinet-1
+  499  knife node show gcp-centos-chef-dk
+  500  knife node show gcp-centos-chef-dk -a ipaddress
+  501  knife node show gcp-centos-chef-dk -a memory
+  502  knife node show gcp-centos-chef-dk -a memory.total
+  503  knife node show gcp-centos-chef-dk -a cookbooks
+  504  knife node list 
+  505  knife node show gcp-centos-chef-server -a cookbooks
+  506  ls
+  507  chef generate cookbook cookbooks/mychef-clinet
+  508  ls -ltr cookbooks/
+  509  vim cookbooks/mychef-clinet/metadata.rb 
+  510  grep -i depends cookbooks/mychef-clinet/metadata.rb 
+  511  vim cookbooks/mychef-clinet/recipes/default.rb 
+  512  ls
+  513  tree cookbooks/mychef-clinet/
+  514  cat cookbooks/mychef-clinet/Berksfile 
+  515  grep -i depend cookbooks/mychef-clinet/metadata.rb 
+  516  ls
+  517  cd cookbooks/mychef-clinet/
+  518  ls
+  519  berks install
+  520  ls
+  521  cat Berksfile.lock
+  522  ls -ltr ~/.berkshelf/cookbooks/
+  523  ls
+  524  knife show cookbooks 
+  525  knife cookbook list 
+  526  berks upload
+  527  knife cookbook list 
+  528  pwd
+  529  ls -ltr ../../.chef/knife.rb 
+  530  ls
+  531  cd ..
+  532  ls
+  533  cd ..
+  534  ls
+  535  knife node list 
+  536  knife node show gcp-centos-chef-dk
+  537  knife node run_list set gcp-centos-chef-dk "recipe[mychef-client]"
+  538  knife node show gcp-centos-chef-dk
+  539  knife node run_list set gcp-centos-chef-dk "recipe[mychef-client],recipe[workstation], recipe[myapache]"
+  540  knife node show gcp-centos-chef-dk
+  541  ls
+  542  chef-client 
+  543  cat cookbooks/mychef-clinet
+  544  knife node run_list set gcp-centos-chef-dk "recipe[mychef-client],recipe[workstation], recipe[myapache]"
+  545  ls
+  546  knife cookbook list 
+  547  knife cookbook delete mychef-clinet
+  548  knife cookbook list 
+  549  ls
+  550  cd cookbooks/
+  551  ls
+  552  mv mychef-clinet mychef-client
+  553  ls
+  554  cd mychef-client/
+  555  ls
+  556  berks install 
+  557  berks upload
+  558  knife node run_list set gcp-centos-chef-dk "recipe[mychef-client],recipe[workstation], recipe[myapache]"
+  559  chef-client 
+  560  knife cookbook list 
+  561  knife cookbook delete mychef-clinet
+  562  cd ..
+  563  chef generate cookbook mychef-client
+  564  ls
+  565  rm -rf mychef-client/
+  566  rm -rf mychef-client
+  567  ls
+  568  cd ..
+  569  chef generate cookbook cookbooks/mychef-client
+  570  ls
+  571  cd cookbooks/
+  572  ls
+  573  vim mychef-client/metadata.rb 
+  574  vim mychef-client/recipes/default.rb 
+  575  ls
+  576  cd mychef-client/
+  577  berks install 
+  578  berks upload
+  579  knife cookbook list 
+  580  knife node run_list set gcp-centos-chef-dk "recipe[mychef-client],recipe[workstation], recipe[myapache]"
+  581  chef-client 
+  582  ls
+  583  cat Berksfile.lock 
+  584  ls
+  585  vim recipes/default.rb 
+  586  vim metadata.rb 
+  587  berks install; berks uplaod
+  588  berks install; berks upload
+  589  chef-client 
+  590  cat /etc/sysconfig/chef-client
+  591  ls
+  592  rm 1 
+  593  vim recipes/default.rb 
+  594  vim metadata.rb 
+  595  berks install; berks upload
+  596  chef-client 
+  597  cat /etc/sysconfig/chef-client
+  598  cd 
+  599  ls
+  600  cd - 
+  601  cd ..
+  602  ls
+  603  knife node show gcp-centos-chef-dk
+  604  cd ..
+  605  ls
+  606  knife role --help
+  607  knife role list 
+  608  lls
+  609  ls
+  610  vim roles/starter.rb 
+  611  ls
+  612  rm  1
+  613  ls
+  614  cd roles/
+  615  ls
+  616  cp -rf starter.rb webserver.rb
+  617  vim webserver.rb 
+  618  knife cookbook list 
+  619  ls
+  620  cat webserver.rb 
+  621  knife role list 
+  622  knife role from file webserver.rb 
+  623  knife role list 
+  624  knife role show webserver
+  625  knife node add 
+  626  knife node show gcp-centos-chef-clinet-1
+  627  knife node run_list set gcp-centos-chef-clinet-1 "role[webserver]"
+  628  knife node show gcp-centos-chef-clinet-1
+  629  ls
+  630  knife cookbook list 
+  631  ls
+  632  cp -rf webserver.rb base.rb
+  633  vim base.rb 
+  634  cp -rf base.rb workstation.rb
+  635  vim workstation.rb 
+  636  knife cookbook list 
+  637  cat base.rb 
+  638  cat workstation.rb 
+  639  knife role from file base.rb workstation.rb 
+  640  knife node list 
+  641  knife node show gcp-centos-chef-clinet-1
+  642  knife node run_list set gcp-centos-chef-clinet-1 "role[base],role[webserver]"
+  643  knife node show gcp-centos-chef-clinet-1
+  644  knife node run_list set gcp-centos-chef-server "role[base]"
+  645  knife node run_list set gcp-centos-chef-dk "role[workstation]"
+  646  knife node show gcp-centos-chef-clinet-1
+  647  knife node show gcp-centos-chefdk
+  648  knife node list 
+  649  knife node show gcp-centos-chef-dk
+  650  knife node show gcp-centos-chef-server
+  651  chef-client 
+  652  ls
+  653  cat base.rb 
+  654  cat webserver.rb 
+  655  cat workstation.rb 
+  656  knife node list 
+  657  knife node show gcp-centos-chef-server
+  658  knife ssh gcp-centos-chef-server --ssh-user root 'chef-client'
+  659  knife ssh "gcp-centos-chef-server" --ssh-user root 'chef-client'
+  660  knife ssh "chef-server.c.ecstatic-armor-208314.internal" --ssh-user root 'chef-client'
+  661  knife node list 
+  662  knife node show gcp-centos-chef-clinet-1
+  663  knife ssh "chek-clinet-1.c.ecstatic-armor-208314.internal" --ssh-user root 'chef-client'
+  664  knife ssh "chek-clinet-1.c.ecstatic-armor-208314.internal" --ssh-user root 'ifconfig'
+  665  ls
+  666  knife ssh "role:webserver" --ssh-user root 'uptime'
+  667  knife ssh "role:base" --ssh-user root 'uptime'
+  668  ls
+  669  cd chef-repo/
+  670  ls
+  671  knife ssh "*:*" --ssh-user root 'uptime'
+  672  cd chef-repo/
+  673  ls
+  674  knife node list 
+  675  knife node show gcp-centos-chef-clinet-1
+  676  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'chef-client'
+  677  knife node show gcp-centos-chef-clinet-1
+  678  history 
+  679  ls
+  680  cd ..
+  681  ls
+  682  cd chef-development-CTS/
+  683  ls
+  684  cp -rf ../chef-repo .
+  685  ls
+  686  git add . 
+  687  git add . --ignore-removal
+  688  git status 
+  689  git commit -m "Roles"
+  690  git push 
+  691  git add . --ignore-removal
+  692  git status 
+  693  git add chef-repo/cookbooks/mychef-client
+  694  git status 
+  695  git rm chef-repo/cookbooks/mychef-client
+  696  git rm -rf chef-repo/cookbooks/mychef-client
+  697  rm -rf chef-repo/cookbooks/mychef-client
+  698  git status 
+  699  git add .
+  700  git add . --ignore-removal
+  701  git commit -m "Chef-Client has been removed "
+  702  git commit -m "Chef-Client has been removed"
+  703  ls
+  704  cp -rf ../chef-repo/cookbooks/mychef-client chef-repo/cookbooks/
+  705  ls
+  706  git add . 
+  707  git add --all
+  708  git status 
+  709  ls
+  710  cd 
+  711  ls
+  712  cd chef-repo/
+  713  ls
+  714  knife environment list 
+  715  knife search node "*:*"
+  716  ls
+  717  mkdir environments
+  718* 
+  719  vim environments/development.rb
+  720  knife environment from file environments/development.rb 
+  721  knife environment list 
+  722  knife node list 
+  723  knife node show gcp-centos-chef-dk
+  724  knife node environment set  gcp-centos-chef-dk development
+  725  knife node show gcp-centos-chef-dk
+  726  knife search node "*:*"
+  727  chef-client 
+  728  ls
+  729  cd environments/
+  730  ls
+  731  cp -rf development.rb production.rb
+  732  vim production.rb 
+  733  knife cookbook list 
+  734  vim production.rb 
+  735  knife environment from file production.rb 
+  736  knife node list 
+  737  knife node environment set gcp-centos-chef-clinet-1 production
+  738  knife search node "*:*"
+  739  ls
+  740  knife search node "*:*"
+  741  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'chef-client'
+  742  cd ..
+  743  ls
+  744  vim cookbooks/myapache/recipes/default.rb 
+  745  ls
+  746  vim cookbooks/myapache/recipes/webpage.rb 
+  747  vim cookbooks/myapache/metadata.rb 
+  748  cd cookbooks/myapache/
+  749  berks install; berks upload 
+  750  knife cookbook list 
+  751  cd
+  752  cd - 
+  753  cd ..
+  754  chef-client 
+  755  knife node list 
+  756  knife node show gcp-centos-chef-dk
+  757  knife role list 
+  758  knife node run_list set gcp-centos-chef-dk "role[superrole]"
+  759  knife role list 
+  760  knife node show gcp-centos-chef-dk
+  761  chef-client 
+  762* 
+  763  vim cookbooks/myapache/recipes/webpage.rb 
+  764  vim cookbooks/myapache/templates/index.erb 
+  765  vim cookbooks/myapache/metadata.rb 
+  766  cd cookbooks/myapache/
+  767  berks upload 
+  768  cd 
+  769  chef-client 
+  770  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'chef-client'
+  771  cd chef-repo/
+  772  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'chef-client'
+  773  ls
+  774  vim cookbooks/myapache/recipes/webpage.rb 
+  775  cd cookbooks/myapache/
+  776  ls
+  777  vim metadata.rb 
+  778  berks upload
+  779  chef-client 
+  780  vim recipes/webpage.rb 
+  781  vim templates/index.erb 
+  782  vim metadata.rb 
+  783  berks upload
+  784  chef-client 
+  785  ls
+  786  cd ..
+  787  knife cookbook list 
+  788  vim environments/production.rb 
+  789  knife environment show production
+  790  knife environment from file environments/production.rb 
+  791  knife environment show production
+  792  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'chef-client'
+  793  knife cookbook list 
+  794  vim environments/production.rb 
+  795  ls
+  796  vim cookbooks/myapache/recipes/webpage.rb 
+  797  vim cookbooks/myapache/templates/index.erb 
+  798* vim cookbooks/myapache/recipes/
+  799  vim cookbooks/myapache/templates/index.erb 
+  800  cd cookbooks/
+  801  ls
+  802  cd myapache/
+  803  ls
+  804  vim metadata.rb 
+  805  berks install; berks uplaod 
+  806  berks install; berks upload 
+  807  chef-client 
+  808  cd ..
+  809  l
+  810  cd ..
+  811  ls
+  812  vim environments/production.rb 
+  813  knife cookbook list 
+  814  knife environment from file environments/production.rb 
+  815  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'chef-client'
+  816  ls
+  817  cat cookbooks/myapache/recipes/default.rb 
+  818  ls
+  819  cd cookbooks/
+  820  ls
+  821  cd myapache/
+  822  ls
+  823  ls -a 
+  824  cat .kitchen.yml 
+  825  cd 
+  826  ls
+  827  cd chef-repo/
+  828  ls
+  829  mkdir  -p data_bags/users 
+  830  ls
+  831  cd data_bags/
+  832  ls
+  833  cd users/
+  834  ls
+  835  vim user1.json
+  836  cp -rf user1.json user2.json 
+  837  vim user2.json 
+  838  vim user1.json
+  839  ls
+  840  knife data bag list 
+  841  knife data bag create users
+  842  knife data bag list 
+  843  knife data bag from file users user1.json user2.json 
+  844  ls
+  845  vim user1.json 
+  846  vim user2.json 
+  847  knife data bag from file users user1.json user2.json 
+  848  knife data bag list 
+  849  knife data bag show users
+  850  knife data bag show users user1
+  851  knife search users "*:*"
+  852  knife search users "platfrom:centos"
+  853  knife search users "platform:centos"
+  854  ls
+  855  cp -rf user2.json user3.json
+  856  vim user3.json 
+  857  knife data bag from file users user3.json 
+  858  knife search users "*:*"
+  859  vim user3.json 
+  860  knife data bag from file users user3.json 
+  861  knife search users "*:*"
+  862  knife search users "platform:centos"
+  863  knife search users "platform:ubuntu"
+  864  knife search users "shell:/bin/bash"
+  865  ls
+  866  cd ..
+  867  ls
+  868  cd ..
+  869  ls
+  870  chef generate cookbook cookbooks/myusers
+  871  ls
+  872  vim cookbooks/myusers/recipes/default.rb 
+  873  ls
+  874  vim roles/workstation.rb 
+  875  ls
+  876  vim cookbooks/workstation/recipes/setup.rb 
+  877  ls
+  878  cd cookbooks/workstation/
+  879  ls
+  880  vim metadata.rb 
+  881  berks upload
+  882* berks u
+  883  berks upload
+  884  ls
+  885  cd ..
+  886  ls
+  887  cd myusers/
+  888  berks install ; berks upload
+  889  chef-client 
+  890  ls
+  891  knife node list 
+  892  knife node show gcp-centos-chef-dk
+  893  knife node add run_list gcp-centos-chef-dk "role[workstation]"
+  894* knife node set run_list  "role[workstation],role[superrole]"
+  895  knife node add  gcp-centos-chef-dk run_list "role[workstation]"
+  896* knife node run_list add gcp-centos-chef-dk "role[wor
+  897  knife node show gcp-centos-chef-dk
+  898  chef-client 
+  899  ls
+  900  cd ..
+  901  ls
+  902  cd ..
+  903  ls
+  904  vim roles/workstation.rb 
+  905  knife role from file roles/workstation.rb 
+  906  knife role show workstation
+  907  chef-client 
+  908  ls
+  909  cd data_bags/
+  910  ls
+  911  cd users/
+  912  ls
+  913  vim user1.json 
+  914  vim user2.json 
+  915  vim user3.json 
+  916  knife data bag user from file user1.json user2.json user3.json 
+  917  knife data bag users from file user1.json user2.json user3.json 
+  918  knife data bag from file users user1.json user2.json user3.json 
+  919  chef-client 
+  920  cat /etc/passwd| grep -i 1002
+  921  vim user3.json 
+  922  vim user1.json 
+  923  vim user2.json 
+  924  vim user1.json 
+  925  knife data bag from file users user1.json user2.json user3.json 
+  926  chef-client 
+  927  ls
+  928  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'chef-client'
+  929  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'cat /etc/passwd'
+  930  ls
+  931  cat /var/chef/cache/cookbooks/myusers/recipes/default.rb 
+  932  chef-client 
+  933  chef-client --help
+  934  ls
+  935  c d..
+  936  cd ..
+  937  ls
+  938  mkdir groups
+  939  cd groups/
+  940  ls
+  941  vim chefs.json
+  942  knife data bag create groups
+  943  knife data bag from file groups chefs.json
+  944  vim chefs.json
+  945  knife data bag from file groups chefs.json
+  946  knife data bag list 
+  947  cd ../../
+  948  ls
+  949  vim cookbooks/myusers/recipes/default.rb 
+  950  vim cookbooks/myusers/recipes/groups.rb
+  951  vim data_bags/groups/chefs.json 
+  952  knife data bag from file groups data_bags/groups/chefs.json
+  953  vim cookbooks/myusers/recipes/groups.rb
+  954  cat data_bags/groups/chefs.json 
+  955  cd cookbooks/myusers/
+  956  ls
+  957  vim metadata.rb 
+  958  berks install; berks uplaod 
+  959  berks install; berks upload 
+  960  ls
+  961  cd 
+  962  chef-client 
+  963  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'cat /etc/passwd'
+  964  cd chef-repo/
+  965  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'cat /etc/passwd'
+  966  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'chef-client'
+  967  ls
+  968  vim cookbooks/myusers/recipes/default.rb 
+  969  vim cookbooks/myusers/recipes/groups.rb 
+  970  vim cookbooks/myusers/recipes/groups.rb groupsgroups
+  971  vim cookbooks/myusers/recipes/default.rb 
+  972  ls
+  973  cd cookbooks/myusers/
+  974  ls
+  975  vim metadata.rb 
+  976  berks install;berks upload 
+  977  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'chef-client'
+  978  knife data bag list 
+  979  knife data bag show groups
+  980  knife data bag show groups chefs
+  981  vim recipes/groups.rb 
+  982  ls
+  983  vim recipes/default.rb 
+  984  ls
+  985  vim metadata.rb 
+  986  berks install;berks upload 
+  987  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'chef-client'
+  988  ls
+  989  vim recipes/groups.rb 
+  990  vim metadata.rb 
+  991  berks install;berks upload 
+  992  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'chef-client'
+  993  ls
+  994  vim recipes/groups.rb 
+  995  ls
+  996  cd ..
+  997  ls
+  998  cd ..
+  999  l
+ 1000  ls
+ 1001  cd data_bags/groups/
+ 1002  ls
+ 1003  cp -rf chefs.json gcp.json
+ 1004  vim gcp.json 
+ 1005  knife data bag from file groups gcp.json 
+ 1006  knife data bag groups 
+ 1007  knife data bag show groups 
+ 1008  knife data bag show groups chefs
+ 1009  knife data bag show groups gcp
+ 1010  knife ssh chek-clinet-1.c.ecstatic-armor-208314.internal --ssh-user root 'chef-client'
+ 1011  ls
+ 1012  cd ..
+ 1013  ls
+ 1014  cd ..
+ 1015  ls
+ 1016  cd ..
+ 1017  ls
+ 1018  tar -zcvf chef-repo.tar.gz chef-repo
+ 1019  ls
+ 1020  cp -rf chef-repo.tar.gz chef-development-CTS/
+ 1021  ls
+ 1022  cd chef-development-CTS/
+ 1023  ls
+ 1024  history > history_day3.txt
